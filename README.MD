@@ -56,11 +56,11 @@ Ao rodar, um arquivo .txt com todos os pesos e utilidades é gerado automaticame
 
 # 📊 Resultados e Conclusões
 Resultados Empíricos
-| Algoritmo  | Instância (N, L) | Tempo Médio | Qualidade da Solução | Observações                              |
-| ---------- | ---------------- | ----------- | -------------------- | ---------------------------------------- |
-| **Guloso** | (1000, 100)      | 6 ms        | **100%**             | Pesos muito baixos favorecem otimalidade |
-| **Guloso** | (1000, 1000)     | 6 ms        | **97.22%**           | Erro típico da heurística                |
-| **PD**     | (1000, 100)      | 4 ms        | **100%**             | Matriz pequena (N·L = 100k)              |
+| Algoritmo  | Instância (N, L) | Tempo Médio | Qualidade da Solução | Observações                    |
+| ---------- | ---------------- | ----------- | -------------------- | ------------------------------ |
+| **Guloso** | (1000, 100)      | 6 ms        | **100%**             | Peso <= 50                     |
+| **Guloso** | (1000, 100)      | 6 ms        | **97.22%**           | Peso <=1000                    |
+| **PD**     | (1000, 100)      | 5 ms        | **100%**             | Matriz pequena (N·L = 100k)    |
 
 
 Conclusão
