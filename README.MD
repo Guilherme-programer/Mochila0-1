@@ -41,7 +41,10 @@ O projeto contém três implementações principais em Java:
 - **JDK 17+**
 - VS Code, IntelliJ IDEA ou terminal
 
-📦 Dados de Teste
+---
+
+
+# 📦 Dados de Teste
 Todas as abordagens usam gerarDados() com seed unificada, garantindo a mesma instância para comparação.
 
 Instâncias usadas nos testes:
