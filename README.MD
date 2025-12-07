@@ -41,27 +41,6 @@ O projeto contém três implementações principais em Java:
 - **JDK 17+**
 - VS Code, IntelliJ IDEA ou terminal
 
-### ✔ Clonar o Repositório
-```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO
-cd SEU_REPOSITORIO
-✔ Compilar e Executar
-Programação Dinâmica (PD)
-bash
-Copiar código
-javac MochilaPDTesteAltoN.java
-java MochilaPDTesteAltoN
-Algoritmo Guloso
-bash
-Copiar código
-javac MochilaGuloso.java
-java MochilaGuloso
-Força Bruta (cuidado!)
-bash
-Copiar código
-# Somente para N <= 25
-javac MochilaForcaBruta.java
-java MochilaForcaBruta
 📦 Dados de Teste
 Todas as abordagens usam gerarDados() com seed unificada, garantindo a mesma instância para comparação.
 
