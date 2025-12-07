@@ -66,10 +66,8 @@ Resultados Empíricos
 Conclusão
 O Guloso mostrou excelente desempenho e surpreendeu ao atingir 100% de acerto quando a capacidade é pequena e os pesos são aleatórios pequenos → cenário ideal para heurísticas de razão.
 
-O PD mantém a ótima solução com tempo muito baixo para L ≤ 1000.
-
 O FB é inviável para N > 25, confirmando sua natureza exponencial.
 
 👥 Contribuição
-Desenvolvido por: [Seu Nome / Grupo]
+Desenvolvido por: [Guilherme Eduardo Matos Drumond] e [Robson Duarte Vicente]
 Data: Dezembro de 2025
