@@ -54,12 +54,14 @@ N = 1000, L = 1000
 
 Ao rodar, um arquivo .txt com todos os pesos e utilidades é gerado automaticamente.
 
-📊 Resultados e Conclusões
+# 📊 Resultados e Conclusões
 Resultados Empíricos
-Algoritmo	Instância (N, L)	Tempo Médio	Qualidade da Solução	Observações
-Guloso	(1000, 100)	6 ms	100%	Pesos muito baixos favorecem otimalidade
-Guloso	(1000, 1000)	6 ms	97.22%	Erro típico da heurística
-PD	(1000, 100)	4 ms	100%	Matriz pequena (N·L = 100k)
+| Algoritmo  | Instância (N, L) | Tempo Médio | Qualidade da Solução | Observações                              |
+| ---------- | ---------------- | ----------- | -------------------- | ---------------------------------------- |
+| **Guloso** | (1000, 100)      | 6 ms        | **100%**             | Pesos muito baixos favorecem otimalidade |
+| **Guloso** | (1000, 1000)     | 6 ms        | **97.22%**           | Erro típico da heurística                |
+| **PD**     | (1000, 100)      | 4 ms        | **100%**             | Matriz pequena (N·L = 100k)              |
+
 
 Conclusão
 O Guloso mostrou excelente desempenho e surpreendeu ao atingir 100% de acerto quando a capacidade é pequena e os pesos são aleatórios pequenos → cenário ideal para heurísticas de razão.
