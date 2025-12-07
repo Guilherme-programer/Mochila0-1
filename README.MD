@@ -1,14 +1,91 @@
-🎒 Projeto do Problema da Mochila (Knapsack Problem)🎯 Visão Geral do ProjetoEste repositório contém a implementação e análise comparativa de três abordagens distintas para resolver o Problema da Mochila 0/1 (0/1 Knapsack Problem), um clássico problema de otimização combinatória classificado como NP-Difícil:Força Bruta (Brute Force): Solução exata com complexidade exponencial.Programação Dinâmica (PD): Solução exata com complexidade pseudo-polinomial.Algoritmo Guloso (Greedy): Solução aproximada com complexidade polinomial.O objetivo do projeto é demonstrar o trade-off entre otimalidade (qualidade da solução) e eficiência (tempo de execução) através da análise de complexidade e testes empíricos.💻 Algoritmos e ComplexidadeAlgoritmoTipo de SoluçãoComplexidade de Tempo (Teórica)Melhor UsoForça Bruta (FB)Exata (Ótima)$\mathcal{O}(N \cdot 2^N)$Apenas para $N \le 25$.Programação Dinâmica (PD)Exata (Ótima)$\mathcal{O}(N \cdot L)$Melhor para $N$ e $L$ pequenos.Algoritmo GulosoAproximada (Heurística)$\mathcal{O}(N \log N)$Melhor para $N$ ou $L$ muito grandes (escalabilidade).⚙️ Estrutura do CódigoO projeto está implementado em Java e utiliza as seguintes classes e métodos principais:Arquivo/ClasseDescriçãoPrincipais MétodosMochilaForcaBruta.javaImplementação que testa todas as $2^N$ combinações de itens.knapsackForcaBruta()MochilaPDTesteAltoN.javaImplementação do algoritmo de Programação Dinâmica (PD) baseado na matriz de memorização ($[N+1][L+1]$).knapsackPD()MochilaGuloso.javaImplementação da heurística Gulosa baseada na razão custo-benefício ($u/p$).knapsackGuloso()UtilitáriosgerarDados()Função unificada para criar instâncias de teste aleatórias e reprodutíveis.gravarDadosEmArquivo()🚀 Como Executar o ProjetoPré-requisitosJava Development Kit (JDK): Versão 17 ou superior.Ambiente de Desenvolvimento: Recomendado Visual Studio Code (VS Code) ou IntelliJ IDEA.Passos para ExecuçãoClone o Repositório:Bashgit clone [LINK DO SEU REPOSITÓRIO]
-cd [NOME DO REPOSITÓRIO]
-Compile e Execute os Arquivos:Execute cada classe principal individualmente para ver os resultados de eficiência. Exemplo:Bash# Teste de Eficiência da Programação Dinâmica (PD)
+# 🎒 Projeto do Problema da Mochila (0/1 Knapsack Problem)
+
+Este repositório contém a implementação e análise comparativa de **três abordagens clássicas** para resolver o Problema da Mochila 0/1, um dos problemas fundamentais de otimização combinatória e classificado como **NP-Difícil**.
+
+## 🎯 Objetivo do Projeto
+
+Demonstrar, na prática, o **trade-off entre otimalidade e eficiência**, comparando:
+
+- 🔵 **Força Bruta (Exata)** — garante a solução ótima, mas é exponencial  
+- 🟢 **Programação Dinâmica (Exata)** — solução ótima com complexidade pseudo-polinomial  
+- 🟡 **Guloso (Aproximado)** — extremamente eficiente, mas não garante otimalidade
+
+---
+
+# 💻 Algoritmos e Complexidade
+
+| Algoritmo              | Tipo de Solução | Complexidade de Tempo | Melhor Uso |
+|------------------------|-----------------|------------------------|------------|
+| **Força Bruta (FB)**  | Exata (Ótima)   | 𝑂(N · 2ⁿ)             | Apenas para N ≤ 25 |
+| **Programação Dinâmica (PD)** | Exata (Ótima) | 𝑂(N · L) | N e L pequenos |
+| **Guloso (Greedy)**   | Aproximada      | 𝑂(N log N)            | N ou L muito grandes |
+
+---
+
+# ⚙️ Estrutura do Código
+
+O projeto contém três implementações principais em Java:
+
+| Arquivo / Classe | Descrição | Principais Métodos |
+|------------------|-----------|---------------------|
+| **MochilaForcaBruta.java** | Testa todas as 2ⁿ combinações | `knapsackForcaBruta()` |
+| **MochilaPDTesteAltoN.java** | Programação Dinâmica com matriz (N+1 × L+1) | `knapsackPD()` |
+| **MochilaGuloso.java** | Heurística baseada em razão u/p | `knapsackGuloso()` |
+| **Utilitários** | Geração e salvamento de instâncias | `gerarDados()`, `gravarDadosEmArquivo()` |
+
+---
+
+# 🚀 Como Executar o Projeto
+
+### ✔ Pré-requisitos
+- **JDK 17+**
+- VS Code, IntelliJ IDEA ou terminal
+
+### ✔ Clonar o Repositório
+```bash
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO
+cd SEU_REPOSITORIO
+✔ Compilar e Executar
+Programação Dinâmica (PD)
+bash
+Copiar código
 javac MochilaPDTesteAltoN.java
 java MochilaPDTesteAltoN
-
-# Teste de Eficiência do Algoritmo Guloso
+Algoritmo Guloso
+bash
+Copiar código
 javac MochilaGuloso.java
 java MochilaGuloso
+Força Bruta (cuidado!)
+bash
+Copiar código
+# Somente para N <= 25
+javac MochilaForcaBruta.java
+java MochilaForcaBruta
+📦 Dados de Teste
+Todas as abordagens usam gerarDados() com seed unificada, garantindo a mesma instância para comparação.
 
-# Teste de Força Bruta (cuidado com o N > 25)
-# javac MochilaForcaBruta.java
-# java MochilaForcaBruta
-Dados de TesteTodos os algoritmos utilizam a função gerarDados() com uma **seed unificada** para garantir que a mesma instância de entrada seja usada na comparação de qualidade (PD vs. Guloso).Instâncias Usadas:$N=1000, L=100$$N=1000, L=1000$Saída: Após a execução, um arquivo de texto (.txt) contendo a lista completa de pesos e utilidades da instância gerada será salvo na mesma pasta, permitindo a verificação dos dados.📊 Resultados e ConclusãoOs testes empíricos confirmaram a análise de complexidade teórica.AlgoritmoInstância (N,L)Tempo MédioQualidade da SoluçãoObservaçãoGuloso$1000, 100$$6 \text{ ms}$$100\%$Solução ótima devido à restrição de pesos.Guloso$1000, 1000$$6 \text{ ms}$$97.22\%$Demonstra o erro inerente à aproximação.PD$1000, 100$$4 \text{ ms}$$100\%$Solução ótima, mais rápido devido ao $N \cdot L$ baixo.A escolha do algoritmo depende do objetivo: o Guloso é ideal para escalabilidade em problemas massivos onde a otimalidade absoluta é dispensável (soluções $\ge 97\%$), enquanto o PD é o único método rápido para garantir a otimalidade da solução.👥 ContribuiçãoDesenvolvido por:[Seu Nome/Nome do Grupo]Data: Dezembro de 2025
+Instâncias usadas nos testes:
+N = 1000, L = 100
+
+N = 1000, L = 1000
+
+Ao rodar, um arquivo .txt com todos os pesos e utilidades é gerado automaticamente.
+
+📊 Resultados e Conclusões
+Resultados Empíricos
+Algoritmo	Instância (N, L)	Tempo Médio	Qualidade da Solução	Observações
+Guloso	(1000, 100)	6 ms	100%	Pesos muito baixos favorecem otimalidade
+Guloso	(1000, 1000)	6 ms	97.22%	Erro típico da heurística
+PD	(1000, 100)	4 ms	100%	Matriz pequena (N·L = 100k)
+
+Conclusão
+O Guloso mostrou excelente desempenho e surpreendeu ao atingir 100% de acerto quando a capacidade é pequena e os pesos são aleatórios pequenos → cenário ideal para heurísticas de razão.
+
+O PD mantém a ótima solução com tempo muito baixo para L ≤ 1000.
+
+O FB é inviável para N > 25, confirmando sua natureza exponencial.
+
+👥 Contribuição
+Desenvolvido por: [Seu Nome / Grupo]
+Data: Dezembro de 2025
