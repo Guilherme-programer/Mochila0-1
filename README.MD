@@ -67,5 +67,5 @@ O Guloso mostrou excelente desempenho e surpreendeu ao atingir 100% de acerto qu
 O FB é inviável para N > 25, confirmando sua natureza exponencial.
 
 👥 Contribuição
-Desenvolvido por: [Guilherme Eduardo Matos Drumond] e [Robson Duarte Vicente]
+Desenvolvido por: [Guilherme Eduardo Matos Drumond]
 Data: Dezembro de 2025
