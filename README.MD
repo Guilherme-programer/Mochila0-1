@@ -50,9 +50,7 @@ Todas as abordagens usam gerarDados() com seed unificada, garantindo a mesma ins
 Instâncias usadas nos testes:
 N = 1000, L = 100
 
-N = 1000, L = 1000
-
-Ao rodar, um arquivo .txt com todos os pesos e utilidades é gerado automaticamente.
+Ao rodar, um arquivo .txt com todos os pesos e utilidades é gerado automaticamente para conferencia da veracidade do codigo manualmente caso queira.
 
 # 📊 Resultados e Conclusões
 Resultados Empíricos
